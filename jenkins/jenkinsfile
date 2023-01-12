@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('clonar repositorio') {
+            steps {
+               git branch: 'main', url: 'https://github.com/robsonkelly/exercicio-ebac11.git'
+            }
+        }
+        stage('instalar dependencias') {
+            steps {
+                bat 'npm install'
+            }
+        }
+               stage('executar os testes') {
+            steps {
+                bat 'npx cypress run'
+            }
+        }
+    }
+}
