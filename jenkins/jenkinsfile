@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clonar repositorio') {
             steps {
-               git branch: 'main', url: 'https://github.com/robsonkelly/exercicio-ebac11.git'
+               git branch: 'main', url: 'https://github.com/robsonkelly/exe-11-com-jenkinsfile.git'
             }
         }
         stage('instalar dependencias') {
